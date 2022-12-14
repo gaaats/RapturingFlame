@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ngngngtjjtg"
+    app:startDestination="@id/loadFragment">
+
+    <fragment
+        android:id="@+id/loadFragment"
+        android:name="com.supersolid.honestfoo.LoadFragment"
+        android:label="fragment_load"
+        tools:layout="@layout/fragment_load" >
+        <action
+            android:id="@+id/action_loadFragment_to_takeGameFragment"
+            app:destination="@id/takeGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/takeGameFragment"
+        android:name="com.supersolid.honestfoo.TakeGameFragment"
+        android:label="fragment_take_game"
+        tools:layout="@layout/fragment_take_game" >
+        <action
+            android:id="@+id/action_takeGameFragment_to_gameOneFragment"
+            app:destination="@id/gameOneFragment" />
+        <action
+            android:id="@+id/action_takeGameFragment_to_gameTvoFragment"
+            app:destination="@id/gameTvoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOneFragment"
+        android:name="com.supersolid.honestfoo.GameOneFragment"
+        android:label="fragment_game_one"
+        tools:layout="@layout/fragment_game_one" >
+        <action
+            android:id="@+id/action_gameOneFragment_to_rellooadFragment"
+            app:destination="@id/rellooadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameTvoFragment"
+        android:name="com.supersolid.honestfoo.GameTvoFragment"
+        android:label="fragment_game_tvo"
+        tools:layout="@layout/fragment_game_tvo" >
+        <action
+            android:id="@+id/action_gameTvoFragment_to_rellooadFragment"
+            app:destination="@id/rellooadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rellooadFragment"
+        android:name="com.supersolid.honestfoo.RellooadFragment"
+        android:label="fragment_rellooad"
+        tools:layout="@layout/fragment_rellooad" >
+        <action
+            android:id="@+id/action_rellooadFragment_to_takeGameFragment"
+            app:destination="@id/takeGameFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/takeGameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
